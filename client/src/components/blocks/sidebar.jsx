@@ -45,9 +45,10 @@ export default function Sidebar() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-            <div className="bg-muted min-h-[100vh] rounded-xl md:min-h-min">
-              {content}
-            </div>
+            {/* <div className="bg-muted min-h-[100vh] rounded-xl md:min-h-min">
+              
+            </div> */}
+            {content}
         </div>
       </SidebarInset>
     </SidebarProvider>
