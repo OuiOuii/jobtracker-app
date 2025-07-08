@@ -71,4 +71,8 @@ server/   # Express backend
 
 ## License
 
-[MIT](LICENSE)
+This project is **not open source**.
+
+It is provided for **educational and personal learning purposes only**.  
+You may view or clone this code to learn from it or showcase it in a portfolio,  
+but **commercial use, redistribution, or modification** is **not allowed** without permission.
