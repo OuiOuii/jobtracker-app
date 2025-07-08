@@ -27,8 +27,7 @@ JobTracker is a modern web application for tracking jobs, built with React, Vite
 #### 1. Clone the repository
 
 ```sh
-git clone https://github.com/yourusername/jobtracker.git
-cd jobtracker
+git clone https://github.com/OuiOuii/jobtracker-app.git
 ```
 
 #### 2. Install dependencies
