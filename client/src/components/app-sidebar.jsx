@@ -28,6 +28,10 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
+import { useSidebarStore } from "@/stores/sidebar_store";
+
+
+
 const data = {
   user: {
     name: "shadcn",
@@ -39,12 +43,13 @@ const data = {
       title: "Dashboard",
       // url: "/dashboard",
       icon: LayoutDashboard,
-      isActive: true,
+      isActive: false,
     },
     {
       title: "Jobs",
       // url: "/jobs",
       icon: Sheet,
+      isActive: false,
     },
   ],
   navSecondary: [
@@ -56,9 +61,21 @@ const data = {
   ],
 }
 
+
 export function AppSidebar({
   ...props
 }) {
+
+  // used to get the stored active content from Zustand
+  const activeContent = useSidebarStore((state) => state.activeContent);
+
+  // Set the active state for the main navigation items based on the active content
+  data.navMain = data.navMain.map(item =>
+  item.title === activeContent
+    ? { ...item, isActive: true }
+    : { ...item, isActive: false }
+  );
+
   return (
     <Sidebar variant="inset" {...props}>
       <SidebarHeader>
