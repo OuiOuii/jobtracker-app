@@ -1,12 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
+
 import { Separator } from "@/components/ui/separator"
 import {
   SidebarInset,
@@ -14,28 +7,12 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 
-import { useState } from "react";
-
 // Zustand store to manage sidebar state
 import { useSidebarStore } from "@/stores/sidebar_store"; 
 
-// Dashboard Content
-const DashboardContent = () => {
-  return (
-    <>
-      <div className="bg-blue-400 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
-    </>
-  )
-};
-
-// Job list content
-const JobListContent = () => {
-  return (
-    <>
-      <div className="bg-amber-700 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
-    </>
-  );
-};
+// Main content components
+import DashboardContent from "@/components/blocks/main-contents/dashboard/dashboard";
+import JobListContent from "@/components/blocks/main-contents/data-table/job-list";
 
 export default function Sidebar() {
 
